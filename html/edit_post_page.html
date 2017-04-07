@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <title>All Posts</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../css/my_account.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="../frontend_js/edit_post_page.js"></script>
+    </head>
+    <body>
+
+	    <nav class="navbar navbar-inverse">
+	          <div class="container">
+	            <div class="navbar-header">
+	              <a class="navbar-brand" href="../html/welcomepage.html">DoTogether</a>
+	            </div>
+	            <div class="navbar-header navbar-right">
+	              <a class="navbar-brand" href="../html/my_account.html">My Account</a>
+	              <a class="navbar-brand" href="#" id="logout">Log Out</a>
+	            </div>
+	          </div>
+	    </nav>
+
+		<section id="section_for_updating" class="col-sm-12">
+			<form id="info">
+				<div class="form-group">
+					<label class="post_id control-label">Post ID: </label>
+					<input class="form-control" id="post_id" readonly>
+				</div>
+
+				<div class="form-group">
+					<label class="title control-label">Title: </label>
+					<input class="form-control" id="title">
+				</div>
+
+				<div class="form-group">
+					<label class="date control-label">Posted @: </label>
+					<input class="form-control" id="date" readonly>
+				</div>
+
+				<div class="form-group">
+					<label class="username control-label">Posted By: </label>
+					<input class="form-control" id="post_by" readonly>
+				</div>
+
+				<div class="form-group">
+					<label class="category control-label">Category: </label>
+					<select id="category" class="form-control">
+						<option>food</option>
+						<option>movie</option>
+						<option>liabrary</option>
+						<option>sport</option>
+						<option>shopping</option>
+					</select>
+				</div>
+
+				<div class="form-group">
+					<label class="descriptions control-label">Details: </label>
+					<textarea class="form-control" id="descriptions" rows="20" cols="400"></textarea>
+				</div>
+
+				<!--
+				<div class="form-group">
+					<label class="comments control-label">Comments: </label>
+					<textarea readonly class="form-control" id="comments" rows="20" cols="400"></textarea>
+				</div>
+				-->
+
+				<!--
+				<div class="form-group">
+					<label class="attendee control-label">People Who Have Joined: </label>
+					<textarea readonly class="form-control" id="attendee" rows="5" cols="400"></textarea>
+				</div>
+				-->
+				
+				<div class="form-group">
+					<button type="button" class="submit_button btn btn-success" id="submit_button_for_editing">Submit</button>
+				</div>
+			</form>
+			
+		</section>
+			
+		<!-- includes -->
+		<script src="https://fb.me/react-15.0.1.js"></script>
+		<script src="https://fb.me/react-dom-15.0.1.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+		
+		
+	</body>
+</html>

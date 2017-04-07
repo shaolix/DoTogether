@@ -1,0 +1,16 @@
+div.form-input {
+	margin-top: 20px;
+	font-size: 20px;
+	display: block; 
+	line-height: 200%;
+	vertical-align: middle;
+}
+
+div.col-sm-5 {
+	padding-left: 0;
+}
+
+div#desc {
+	margin-top: 0;
+	margin-bottom: 30px;
+}

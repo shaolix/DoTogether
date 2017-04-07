@@ -1,0 +1,15 @@
+.list_buttons {
+	list-style-type: none
+}
+
+.list_buttons li {
+	margin: 10px 10px 10px 10px;
+}
+
+.posts {
+	display: inline-block;
+}
+
+#users_button {
+	display: none;
+}

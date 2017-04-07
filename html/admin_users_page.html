@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <title>All Posts</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Website CSS style -->
+        <link rel="stylesheet" href="../css/admin_users_page.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <!--Website JS-->
+		<script src="../frontend_js/admin_users_page.js"></script>
+    </head>
+    <body>
+
+    <nav class="navbar navbar-inverse">
+          <div class="container">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="../html/welcomepage.html">DoTogether</a>
+            </div>
+            <div class="navbar-header navbar-right">
+              <a class="navbar-brand" href="../html/my_account.html">My Account</a>
+              <a class="navbar-brand" href="#" id="logout">Log Out</a>
+            </div>
+          </div>
+    </nav>
+		
+		<section class="posts col-sm-12">
+			<ul class="list_buttons col-sm-2">
+				<li><button class="btn btn-warning" id="adminuseruser">Users</button></li>
+				<li><button class="btn btn-success" id="adminuserspost">Posts</button></li>
+			</ul>
+
+			<article id="contents" class="col-sm-10">
+				<table style="width:100%;" id="all_posts" class="table table-hover table-responsive">
+					<!-- First Post -->
+					<tr class="post1" id="post1">
+						<!-- First Column -->
+						<td class="col-sm-9">
+							<h3 id="post_user1"></h3>
+						</td>
+						<!-- Second Column -->
+						<td>
+							<button id="posts_Delete1" class="btn btn-danger">Delete</button>
+						</td>
+					</tr>
+
+					<!-- Second Post -->
+					<tr class="post2" id="post2">
+						<!-- First Column -->
+						<td class="col-sm-9">
+							<h3 id="post_user2"></h3>
+						</td>
+						<!-- Second Column -->
+						<td>
+							<div id="post_buttons2"></div>
+							<button id="posts_Delete2" class="btn btn-danger">Delete</button>
+						</td>
+					</tr>
+
+					<!-- Third Post -->
+					<tr class="post3" id="post3">
+						<!-- First Column -->
+						<td class="col-sm-9">
+							<h3 id="post_user3"></h3>
+
+						</td>
+						<!-- Second Column -->
+						<td>
+							<div id="post3_buttons"></div>
+							<button id="posts_Delete3" class="btn btn-danger">Delete</button>
+						</td>
+					</tr>
+				</table>
+			</article>
+			<div id="pagebutton" class="row" style="margin-left:10px;">
+                <button type="button" id="pre" class="btn btn-primary">Previous</button>
+                <button type="button" id="next" class="btn btn-primary">Next</button>
+            </div>
+		</section>
+			
+		<!-- includes -->
+		<script src="https://fb.me/react-15.0.1.js"></script>
+		<script src="https://fb.me/react-dom-15.0.1.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+		
+
+		<!-- CSS -->
+		<!-- including this for using icons -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<!-- including css file -->
+	</body>
+</html>

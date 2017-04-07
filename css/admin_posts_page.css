@@ -1,0 +1,32 @@
+.list_buttons {
+	list-style-type: none
+}
+
+.list_buttons li {
+	margin: 10px 10px 10px 10px;
+}
+
+.posts {
+	display: inline-block;
+}
+
+#contents {
+	display: none;
+	float: right;
+}
+
+#users_button {
+	display: none;
+}
+
+#first_post {
+	display: none;
+}
+
+#second_post {
+	display: none;
+}
+
+#third_post {
+	display: none;
+}

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <title>All Posts</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Website CSS style -->
+        <link rel="stylesheet" href="../css/my_account.css">
+        <link rel="stylesheet" href="../css/admin_posts_page.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <!--Website JS-->
+		<script src="../frontend_js/admin_posts_page.js"></script>
+    </head>
+    <body>
+
+    <nav class="navbar navbar-inverse">
+          <div class="container">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="../html/welcomepage.html">DoTogether</a>
+            </div>
+            <div class="navbar-header navbar-right">
+              <a class="navbar-brand" href="../html/my_account.html">My Account</a>
+              <a class="navbar-brand" href="#" id="logout">Log Out</a>
+            </div>
+          </div>
+    </nav>
+		
+		<section class="posts col-sm-12">
+			<ul class="list_buttons col-sm-2">
+				<li><button id="users_button" class="btn btn-warning">Users</button></li>
+				<li><button id="posts_button" class="btn btn-success" id = "adminuserspost">Posts</button></li>
+			</ul>
+
+			<article id="contents" class="col-sm-10">
+				<table style="width:100%;" id="all_posts" class="table table-hover table-responsive">
+					<!-- First Post -->
+					<tr class="post1" id="first_post">
+						<!-- First Column -->
+						<td class="col-sm-9">
+							<h3 id="post1_header" ></h3>
+							<div class="post_info" style="border:1px solid silver;margin:5px 5px 5px 5px;padding:20px 20px 20px 20px;">
+								<div id="post1_id"></div>
+								<div id="post1_title"></div>
+								<div id="post1_date"></div>
+								<div id="post1_username"></div>
+								<div id="post1_category"></div>
+								<div id="post1_details"></div>
+							</div>
+						</td>
+						<!-- Second Column -->
+						<td class="col-sm-3">
+							<button id="post1_edit_button" class="btn btn-primary">Edit</button>
+							<button id="post1_delete" class="btn btn-danger">Delete</button>
+						</td>
+					</tr>
+
+					<!-- Second Post -->
+					<tr class="post2" id="second_post">
+						<!-- First Column -->
+						<td class="col-sm-9">
+							<h3 id="post2_header"></h3>
+							<div class="post_info" style="border:1px solid silver;margin:5px 5px 5px 5px;padding:20px 20px 20px 20px;">
+								<div id="post2_id"></div>
+								<div id="post2_title"></div>
+								<div id="post2_date"></div>
+								<div id="post2_username"></div>
+								<div id="post2_category"></div>
+								<div id="post2_details"></div>
+							</div>
+						</td>
+						<!-- Second Column -->
+						<td class="col-sm-3">
+							<button id="post2_edit_button" class="btn btn-primary">Edit</button>
+							<button id="post2_delete" class="btn btn-danger">Delete</button>
+						</td>
+					</tr>
+
+					<!-- Third Post -->
+					<tr class="post3" id="third_post">
+						<!-- First Column -->
+						<td class="col-sm-9">
+							<h3 id="post3_header"></h3>
+							<div class="post_info" style="border:1px solid silver;margin:5px 5px 5px 5px;padding:20px 20px 20px 20px;">
+								<div id="post3_id"></div>
+								<div id="post3_title"></div>
+								<div id="post3_date"></div>
+								<div id="post3_username"></div>
+								<div id="post3_category"></div>
+								<div id="post3_details"></div>
+							</div>
+						</td>
+						<!-- Second Column -->
+						<td class="col-sm-3">
+							<button id="post3_edit_button" class="btn btn-primary">Edit</button>
+							<button id="post3_delete" class="btn btn-danger">Delete</button>
+						</td>
+					</tr>
+				</table>
+
+				<div id="pagebutton" class="row" style="margin-left:10px;">
+                	<button type="button" id="pre" class="btn btn-info">Previous</button>
+                	<button type="button" id="next" class="btn btn-info">Next</button>
+            	</div>
+			</article>
+
+			
+		</section>
+			
+		<!-- includes -->
+		<script src="https://fb.me/react-15.0.1.js"></script>
+		<script src="https://fb.me/react-dom-15.0.1.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+		
+
+		<!-- CSS -->
+		<!-- including this for using icons -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<!-- including css file -->
+	</body>
+</html>
