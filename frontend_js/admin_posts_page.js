@@ -21,6 +21,7 @@ $(document).ready(function() {
     $('#users_button').click(function() {
         window.location.assign('../html/admin_users_page.html');
     });
+    
 
     // update
     $('#post1_edit_button').click(function() {
@@ -150,8 +151,12 @@ $(document).ready(function() {
 
                     if (sessionStorage.getItem("username") == "admin") {
                         $('#users_button').show();
+                        $('#findattendee').hide();
+                        $('#attendeeinput').hide();
                     } else {
                         $('#users_button').hide();
+                        $('#findattendee').show();
+                        $('#attendeeinput').show();
                     }
 
                     if (posts.length == 0) {
@@ -212,6 +217,7 @@ $(document).ready(function() {
         $('#post' + id + '_username').text('Posted By: ' + post.username);
         $('#post' + id + '_category').text('Category: ' + post.category);
         $('#post' + id + '_details').text('Details: ' + post.descriptions);
+		  $('#post' + id + '_attendee').html('Attendees: ' + post.attendee);
     }
 
     function deletePost(id) {
@@ -239,5 +245,37 @@ $(document).ready(function() {
             }
         });
     }
+    
+    $("#findattendee").click(function() {
+    	
+    		console.log("findfind");
+    		
+    		var attendee = $("#attendeeinput").val();
+    		
+    		if (!attendee) {
+				window.alert("Please enter attendee's username");    		
+    		}
+    		else {
+    			$.ajax({
+					url: "/userprofile/" + attendee,
+					type: "GET",
+					dataType: "json",
+					contentType: "application/json; charset=utf-8",
+					success: function(response) {
+						var phone = response.phone;
+						var email = response.email;
+						var msg = "Attendee's phone: " + phone + "\nAttendee's email: " + email;
+						window.alert(msg);
+	
+					},
+					complete: function(xhr, statusText) {
+						if (xhr.status == 404) {
+							window.alert("Attendee not found");									
+						}
+					}
+				});
+    		}
+    });
+    
 
 });

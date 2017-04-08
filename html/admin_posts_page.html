@@ -31,7 +31,11 @@
 			<ul class="list_buttons col-sm-2">
 				<li><button id="users_button" class="btn btn-warning">Users</button></li>
 				<li><button id="posts_button" class="btn btn-success" id = "adminuserspost">Posts</button></li>
+				<hr>
+				<li><button class="btn btn-success" id = "findattendee">Find an attendee's info</button></li>
+        		<div class="col-sm-10"><input class="form-control" type="text" name="attendee's username" placeholder="Enter attendee's username" id="attendeeinput"></div>
 			</ul>
+			
 
 			<article id="contents" class="col-sm-10">
 				<table style="width:100%;" id="all_posts" class="table table-hover table-responsive">
@@ -47,6 +51,7 @@
 								<div id="post1_username"></div>
 								<div id="post1_category"></div>
 								<div id="post1_details"></div>
+								<div id="post1_attendee"></div>
 							</div>
 						</td>
 						<!-- Second Column -->
@@ -68,6 +73,7 @@
 								<div id="post2_username"></div>
 								<div id="post2_category"></div>
 								<div id="post2_details"></div>
+								<div id="post2_attendee"></div>
 							</div>
 						</td>
 						<!-- Second Column -->
@@ -89,6 +95,7 @@
 								<div id="post3_username"></div>
 								<div id="post3_category"></div>
 								<div id="post3_details"></div>
+								<div id="post3_attendee"></div>
 							</div>
 						</td>
 						<!-- Second Column -->

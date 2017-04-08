@@ -3,6 +3,15 @@
     // window.localStorage.setItem("username", "123");
     
     initPage();
+    
+    if (sessionStorage.getItem("username") == "admin") {
+       $("#makenewpost").hide();
+       $("#adminallusers").show();
+    }
+    else {
+    	 $("#makenewpost").show();
+       $("#adminallusers").hide();
+    }
 
 
     $('#submit_btn').click(function(){

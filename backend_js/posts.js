@@ -194,7 +194,7 @@ module.exports = function (app, mongo, autoIncrement) {
 				mongo.getDB().collection('posts').updateOne({
 					_id: parseInt(req.params.pid)
 				}, {
-					$addToSet: {attendee: req.username}
+					$addToSet: {attendee: req.body.username}
 				}, function (err, result) {
 					res.sendStatus(200);				
 				});			

@@ -106,7 +106,7 @@ $(document).ready(function() {
 
 				curPosts = allPosts;
 				var curidx = pagecount*10;
-				//$("#pre").hide();	
+
 				
 				if(sessionStorage.getItem("category") == "food" && !sessionStorage.getItem("userSearchInput")){
 					curPosts = foodPosts;				
@@ -175,7 +175,18 @@ $(document).ready(function() {
 						pid = String(pid + k);
 						$(pid).show();
 					}
-				}				
+				}
+				
+								
+				$("#pre").hide();
+				if (curPosts.length < 10) {
+					$("#next").hide();
+				}
+				else {
+					$("#next").show();				
+				}
+					
+								
 			}
 		});
 	
@@ -231,28 +242,40 @@ $(document).ready(function() {
 				$(pdate).html(String(curPosts[curidx + k].date));
 			}
 		}
-
+		
 	}
 	
 	$("#next").click(function() {
 
 		var curidx = pagecount*10;
+		
 
 		if ((curidx + 10) < curPosts.length) {
 			pagecount++;
 			Refreshpost();
 		}
+		if ((curidx + 20) > curPosts.length) {
+			$("#next").hide();
+		}
+		
+		$("#pre").show();
 
 	});
 
 	$("#pre").click(function() {
 
 		var curidx = pagecount*10;
+		
 
 		if (curidx > 0) {
 			pagecount--;
 			Refreshpost();
 		}
+		if (curidx == 10) {
+			$("#pre").hide();		
+		}
+		
+		$("#next").show();
 
 	});
 
@@ -260,43 +283,98 @@ $(document).ready(function() {
 		curPosts = foodPosts;
 		pagecount = 0;
 		Refreshpost();
+		$("#pre").hide();
+		if (curPosts.length < 10) {
+			$("#next").hide();
+		}
+		else {
+			$("#next").show();				
+		}
 	});
 
 	$("#moviecat").click(function() {
 		curPosts = moviePosts;
 		pagecount = 0;
 		Refreshpost();
+		$("#pre").hide();
+		if (curPosts.length < 10) {
+			$("#next").hide();
+		}
+		else {
+			$("#next").show();				
+		}
 	});
 
 	$("#librarycat").click(function() {
 		curPosts = libPosts;
 		pagecount = 0;
 		Refreshpost();
+		$("#pre").hide();
+		if (curPosts.length < 10) {
+			$("#next").hide();
+		}
+		else {
+			$("#next").show();				
+		}
 	});
 
 	$("#sportcat").click(function() {
 		curPosts = sportPosts;0
 		pagecount = 0;
 		Refreshpost();
+		$("#pre").hide();
+		if (curPosts.length < 10) {
+			$("#next").hide();
+		}
+		else {
+			$("#next").show();				
+		}
 	});
 
 	$("#shoppingcat").click(function() {
 		curPosts = ShopPosts;
 		pagecount = 0;
 		Refreshpost();
+		$("#pre").hide();
+		if (curPosts.length < 10) {
+			$("#next").hide();
+		}
+		else {
+			$("#next").show();				
+		}
 	});
 
 	$("#allcat").click(function() {
 		curPosts = allPosts;
 		pagecount = 0;
 		Refreshpost();
+		$("#pre").hide();
+		if (curPosts.length < 10) {
+			$("#next").hide();
+		}
+		else {
+			$("#next").show();				
+		}
 	});
 	
 	function Fillpostdetail(pidx) {
 
 		curpid = curPosts[pidx]._id;
 		
+
+		$("#genderde").html("Gender : ");
+		$("#cityde").html("City : ");
+		$("#emailde").html("Email : ");
+		$("#phonede").html("Phone : ");
+		document.getElementById('avatarde').src = "https://x1.xingassets.com/assets/frontend_minified/img/users/nobody_m.original.jpg";
+		
+		$("#ptitlede").html("");
+		$("#puserde").html("");
+		$("#pdatede").html("");
+		$("#pcontentde").html("");
+		
 		$("#allcomments").empty();
+		
 		$("#allpost").hide();
 		$("#postdetail").show();
 
@@ -374,6 +452,7 @@ $(document).ready(function() {
 				type: "PUT",
 				dataType: "json",
 				contentType: "application/json; charset=utf-8",
+				data: JSON.stringify( { "username": sessionStorage.getItem("username") } ),
 				complete: function(xhr, statusText) {
 					if (xhr.status == 200) { // join success
 						window.alert("Join success!");									

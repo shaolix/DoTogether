@@ -41,6 +41,7 @@ module.exports = function (app, mongo, autoIncrement, sha1, generateToken) {
 	    });
 	  });
 	});
+
 	
 //Get all user
 app.get('/users/getalluser',function(req,res){

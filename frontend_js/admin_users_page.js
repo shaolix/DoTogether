@@ -9,6 +9,8 @@ $(document).ready(function() {
     console.log(document.location.href);
     console.log(document.location);
     getalluser();  
+    
+    $("#pre").hide();
 
     $("#logout").click(function(){
         sessionStorage.removeItem("username");
